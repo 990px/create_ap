@@ -648,7 +648,7 @@ STORE_CONFIG=
 LOAD_CONFIG=
 
 CONFDIR=
-WIFI_IFACE=
+WIFI_IFACE="$(/sys/class/net/wl*/wireless | awk -F'/' '{ print $5 }')"
 VWIFI_IFACE=
 INTERNET_IFACE=
 BRIDGE_IFACE=
